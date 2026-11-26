@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>✨ AI Prompt Generator</h1>
+            <p>Create effective AI prompts easily!</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <section class="form-section">
+
+                <h2>Build Your Prompt</h2>
+                <p class="description">
+                    Fill in the details below to create your AI prompt.
+                </p>
+
+                <!-- Role -->
+                <div class="input-group">
+                    <label for="role">1. Role</label>
+                    <input
+                        type="text"
+                        id="role"
+                        placeholder="Example: Act as a computer science teacher"
+                    >
+                </div>
+
+                <!-- Task -->
+                <div class="input-group">
+                    <label for="task">2. Task</label>
+                    <textarea
+                        id="task"
+                        placeholder="Example: Explain artificial intelligence"
+                    ></textarea>
+                </div>
+
+                <!-- Context -->
+                <div class="input-group">
+                    <label for="context">3. Context</label>
+                    <textarea
+                        id="context"
+                        placeholder="Example: I am a first-year college student"
+                    ></textarea>
+                </div>
+
+                <!-- Constraints -->
+                <div class="input-group">
+                    <label for="constraints">4. Constraints</label>
+                    <textarea
+                        id="constraints"
+                        placeholder="Example: Use simple English and explain in 3 bullet points"
+                    ></textarea>
+                </div>
+
+                <!-- Output Format -->
+                <div class="input-group">
+                    <label for="format">5. Output Format</label>
+
+                    <select id="format">
+                        <option value="">Select output format</option>
+                        <option value="Paragraph">Paragraph</option>
+                        <option value="Bullet Points">Bullet Points</option>
+                        <option value="Table">Table</option>
+                        <option value="JSON">JSON</option>
+                        <option value="Markdown">Markdown</option>
+                    </select>
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button class="generate-btn" onclick="generatePrompt()">
+                        ✨ Generate Prompt
+                    </button>
+
+                    <button class="sample-btn" onclick="loadSample()">
+                        Sample Prompt
+                    </button>
+
+                    <button class="clear-btn" onclick="clearAll()">
+                        Clear
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section">
+
+                <h2>Generated Prompt</h2>
+
+                <p class="description">
+                    Your generated prompt will appear below.
+                </p>
+
+                <div id="output" class="output-box">
+                    <p class="placeholder">
+                        Your prompt will appear here...
+                    </p>
+                </div>
+
+                <button class="copy-btn" onclick="copyPrompt()">
+                    📋 Copy Prompt
+                </button>
+
+                <p id="message"></p>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Designed for College Students | AI Prompt Generator © 2026</p>
+        </footer>
+
+    </div>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
